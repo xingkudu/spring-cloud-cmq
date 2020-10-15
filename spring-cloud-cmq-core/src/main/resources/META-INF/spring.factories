@@ -1,0 +1,4 @@
+# Auto Configuration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.qcloud.cmq.core.config.CMQAutoConfiguration,\
+  com.qcloud.cmq.core.config.CMQAccountAutoConfiguration

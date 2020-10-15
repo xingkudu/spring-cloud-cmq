@@ -1,0 +1,13 @@
+
+cmq:
+  server:
+    endpoint: http://127.0.0.1:8081
+    secret-id: aa
+    secret-key: bb
+logging:
+  file: /data/${spring.application.name}/root.log
+  level:
+    root: INFO
+spring:
+  application:
+    name: testcmq

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.qcloud</groupId>
+    <artifactId>spring-cloud-cmq</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-cloud-cmq-core</module>
+        <module>spring-cloud-cmq-sleuth</module>
+        <module>spring-cloud-cmq-demo</module>
+    </modules>
+    <packaging>pom</packaging>
+    <properties>
+        <cmq.version>1.0.7.4</cmq.version>
+        <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cmq-http-client</artifactId>
+                <version>${cmq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>spring-cloud-cmq-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>spring-cloud-cmq-sleuth</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
